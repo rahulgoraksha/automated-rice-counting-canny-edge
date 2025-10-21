@@ -1,0 +1,59 @@
+Rice Grain Counting Dataset
+===========================
+
+Dataset Name:
+--------------
+Rice Grain Counting Dataset
+
+Overview:
+----------
+This dataset is curated for developing and testing automated rice counting systems using image processing and computer vision techniques. 
+The primary goal is to identify, segment, and count rice grains from images captured under varying lighting and background conditions.
+
+Contents:
+----------
+The dataset consists of high-resolution images containing rice grains placed on different surfaces such as:
+- Wooden textures
+- Plain white or dark backgrounds
+- Mixed lighting conditions (natural and artificial)
+
+Each image represents real-world variations in:
+- Grain size
+- Grain shape
+- Orientation (horizontal, vertical, tilted)
+- Overlapping and isolated grains
+
+File Details:
+--------------
+Image Format: .jpg, .png
+Resolution Range: 720 × 480 to 1920 × 1080 pixels
+Total Images: 50+ (expandable)
+Color Mode: RGB
+Annotation: No manual labels required — automatic contour-based detection is used
+Example File: sample_image.png (4 isolated rice grains on a wooden surface)
+
+Applications:
+--------------
+- Automated grain counting
+- Rice quality grading and classification
+- Object detection and segmentation research
+- Machine vision systems for agriculture
+
+Example Use Case:
+------------------
+Example Python snippet to load and view a dataset image:
+
+import cv2
+import matplotlib.pyplot as plt
+
+image = cv2.imread('dataset/sample_image.png')
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.title('Rice Grain Sample')
+plt.axis('off')
+plt.show()
+
+Future Enhancements:
+---------------------
+- Add labeled datasets for broken vs. whole rice classification
+- Include multiple rice varieties (Basmati, Sona Masoori, etc.)
+- Provide lighting variation and shadow-handling scenarios
